@@ -3,6 +3,8 @@ Simulation study in R on Bayesian conditional independence tests in 2x2x2 contin
 
 The Bayes factors are computed using the R Package BAS (Bayesian Variable Selection and Model Averaging using Bayesian Adaptive Sampling).
 
+The conditional independence test (and the data creation) is based on a log-linear representation of the CMH test as discussed in the paper "Log-linear representations of the mantel-haenszel and the breslow-day tests" (von Eye and Indurkhya, 2000). The relevant effect size (conditional log odds ratio) is referred to as u_12 in the figure below, while the other u-paramters are nuisance parameters. 
+
 The figure below gives an overview of how the simulation process works. 
 <img width="617" alt="simulation_process" src="https://user-images.githubusercontent.com/36103689/141364834-365e2e5a-e869-4e4c-ac9a-ad293a6c7cf7.PNG">
 
