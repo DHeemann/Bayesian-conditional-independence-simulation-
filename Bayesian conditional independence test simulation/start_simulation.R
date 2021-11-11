@@ -8,9 +8,10 @@
 #### 1.Set up #### 
 
 # set path for simulation project 
-user_path  <- "C:/Users/Daniel/Desktop/Bayesian conditional independence test simulation"
+# user_path would e.g.  "C:/Users/your_name/Desktop"
+user_path <- "path_where_folder_is_stored"
 
-setwd(user_path)
+setwd(paste0(user_path, "/Bayesian conditional independence test simulation"))
 
 # create subfolders where Bayes factor results per prior will be stored.
 priors <- c("beta_prime", 
