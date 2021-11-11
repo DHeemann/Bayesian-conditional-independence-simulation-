@@ -1,4 +1,4 @@
-# Bayesian-conditional-independence-simulation-
+# Bayesian conditional independence test - simulation study 
 Simulation study in R on Bayesian conditional independence tests in 2x2x2 contingency tables using different (g-)prior variants. 
 
 The Bayes factors are computed using the R Package BAS (Bayesian Variable Selection and Model Averaging using Bayesian Adaptive Sampling).
