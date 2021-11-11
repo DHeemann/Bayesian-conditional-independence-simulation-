@@ -2,4 +2,4 @@
 Simulation study on Bayesian conditional independence tests in 2x2x2 contingency tables using different (g-)prior variants. 
 
 The figure below gives an overview of how the simulation process works. 
-[simulation_process_13_10_2021.pdf](https://github.com/DHeemann/Bayesian-conditional-independence-simulation-/files/7523107/simulation_process_13_10_2021.pdf)
+<img width="635" alt="simulation_process" src="https://user-images.githubusercontent.com/36103689/141364643-d877f774-9995-4e34-a6d7-8ba296ff094d.PNG">
