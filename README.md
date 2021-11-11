@@ -2,6 +2,8 @@
 Simulation study in R on Bayesian conditional independence tests in 2x2x2 contingency tables using different (g-)prior variants. 
 
 The whole project with subfolders can be downloaded from github with the following link:
+
+
 https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FDHeemann%2FBayesian-conditional-independence-simulation-%2Ftree%2Fmain%2FBayesian%2520conditional%2520independence%2520test%2520simulation
 
 
