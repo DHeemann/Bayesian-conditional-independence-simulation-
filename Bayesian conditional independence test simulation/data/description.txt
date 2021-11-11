@@ -1,0 +1,3 @@
+When running the simulation script, the simulated data will be stored in this folder. 
+These will be needed to calculate the Bayes factors. 
+
