@@ -8,10 +8,10 @@ The figure below gives an overview of how the simulation process works.
 
 
 The script "start_simulation.R" will initiate the simulation by: 
-(1) Loading the needed packages and installing them if not already installed 
-(2) Running all the set-up scripts (for the functions needed later on) 
-(3) Creating the simulated data sets (sourcing the script "create_data_loglinear.R" -> numbers of samples can be adjusted here to reduce computing time)
-(4) Computing p-values (CMH, logistic and log-linear model comparison test)
-(5) Computing Bayes factors 
-(6) Creating plots for the p-values
-(7) Creating plots for the Bayes factors 
+- Loading the needed packages and installing them if not already installed 
+- Running all the set-up scripts (for the functions needed later on) 
+- Creating the simulated data sets (sourcing the script "create_data_loglinear.R" -> numbers of samples can be adjusted here to reduce computing time)
+- Computing p-values (CMH, logistic and log-linear model comparison test)
+- Computing Bayes factors 
+- Creating plots for the p-values
+- Creating plots for the Bayes factors 
