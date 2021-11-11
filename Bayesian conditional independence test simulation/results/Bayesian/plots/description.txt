@@ -1,0 +1,1 @@
+In this folder, the figures for the Bayes factor pattern will be saved. 

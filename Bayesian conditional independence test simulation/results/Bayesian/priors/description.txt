@@ -1,0 +1,1 @@
+Running the "start_simulation.R" script will create subfolders here for each prior, which will store the computed Bayes factors. 
