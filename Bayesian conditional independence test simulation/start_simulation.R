@@ -12,6 +12,16 @@ user_path  <- "C:/Users/Daniel/Desktop/Bayesian conditional independence test si
 
 setwd(user_path)
 
+# create subfolders where Bayes factor results per prior will be stored.
+priors <- c("beta_prime", 
+            "fixed_g", 
+            "hyper_gn", 
+            "intrinsic", 
+            "robust", 
+            "unit_information")
+
+sapply(priors, function(x) dir.create(file.path("results/Bayesian/priors", x)))
+
 
 # load and install relevant packages 
 # if all packages are already installed, they will not be installed again
