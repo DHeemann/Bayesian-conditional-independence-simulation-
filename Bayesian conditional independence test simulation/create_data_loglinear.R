@@ -38,8 +38,14 @@ if (!"overwrite_data" %in% ls()) {
   overwrite_data <- FALSE
 }
 
-u_per_n_input <- 25
-samples_per_u_input <- 25
+if (!"u_per_n_input" %in% ls()) {
+  u_per_n_input <- 25
+}
+
+if (!"samples_per_u_input" %in% ls()) {
+  samples_per_u_input <- 25
+}
+
 
 #### 2. Simulate data for small sample size ranges #####
 
