@@ -2,7 +2,6 @@
 
 ##### 1. Setup ######
 
-setwd(user_path)
 
 # Note that in this script
 # u0 refers to no effect, u1 refers to small effect, 
