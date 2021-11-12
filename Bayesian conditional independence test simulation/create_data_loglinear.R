@@ -38,6 +38,9 @@ if (!"overwrite_data" %in% ls()) {
   overwrite_data <- FALSE
 }
 
+u_per_n_input <- 25
+samples_per_u_input <- 25
+
 #### 2. Simulate data for small sample size ranges #####
 
 if (overwrite_data | !("sim_data_u0_small.RData" %in% list.files("data"))) {
@@ -47,8 +50,8 @@ if (overwrite_data | !("sim_data_u0_small.RData" %in% list.files("data"))) {
   sim_data_u0_small <- simulate_data(u12 = 0,  
                                      s_range = c(20, 100),
                                      step_size = 20,
-                                     u_per_n  = 50, 
-                                     samples_per_u = 50, 
+                                     u_per_n  = u_per_n_input,
+                                     samples_per_u = samples_per_u_input, 
                                      k = 2)
   
   save_file(sim_data_u0_small, path = "data/", 
@@ -63,8 +66,8 @@ if (overwrite_data | !("sim_data_u1_small.RData" %in% list.files("data"))) {
   sim_data_u1_small <- simulate_data(u12 = small_u12, 
                                      s_range = c(20, 100),
                                      step_size = 20,
-                                     u_per_n  = 50, 
-                                     samples_per_u = 50, 
+                                     u_per_n  = u_per_n_input,
+                                     samples_per_u = samples_per_u_input, 
                                      k = 2)
   
   save_file(sim_data_u1_small, path = "data/", 
@@ -80,8 +83,8 @@ if (overwrite_data | !("sim_data_u2_small.RData" %in% list.files("data"))) {
   sim_data_u2_small <- simulate_data(u12 = medium_u12, 
                                      s_range = c(20, 100),
                                      step_size = 20,
-                                     u_per_n  = 50, 
-                                     samples_per_u = 50, 
+                                     u_per_n  = u_per_n_input,
+                                     samples_per_u = samples_per_u_input, 
                                      k = 2)
  
    save_file(sim_data_u2_small, path = "data/", 
@@ -95,8 +98,8 @@ if (overwrite_data | !("sim_data_u2_small.RData" %in% list.files("data"))) {
   sim_data_u3_small <- simulate_data(u12 = large_u12, 
                                      s_range = c(20, 100),
                                      step_size = 20,
-                                     u_per_n  = 50, 
-                                     samples_per_u = 50, 
+                                     u_per_n  = u_per_n_input,
+                                     samples_per_u = samples_per_u_input, 
                                      k = 2)
   
     save_file(sim_data_u3_small, path = "data/", 
@@ -113,8 +116,8 @@ if (overwrite_data | !("sim_data_u0_large.RData" %in% list.files("data"))) {
   sim_data_u0_large <- simulate_data(u12 = 0,  
                                      s_range = c(100, 3000),
                                      step_size = 100,
-                                     u_per_n  = 50, 
-                                     samples_per_u = 50, 
+                                     u_per_n  = u_per_n_input,
+                                     samples_per_u = samples_per_u_input, 
                                      k = 2)
   
   # save files for large sample size ranges
@@ -127,11 +130,11 @@ if (overwrite_data | !("sim_data_u0_large.RData" %in% list.files("data"))) {
  if (overwrite_data | !("sim_data_u1_large.RData" %in% list.files("data"))) {
   set.seed(20210921)
   # simulate data for u1 and large sample size ranges 
-  sim_data_u1_large <- simulate_data(u12 = log(1.4327291),  
+  sim_data_u1_large <- simulate_data(u12 = small_u12,  
                                      s_range = c(100, 3000),
                                      step_size = 100,
-                                     u_per_n  = 50, 
-                                     samples_per_u = 50, 
+                                     u_per_n  = u_per_n_input,
+                                     samples_per_u = samples_per_u_input, 
                                      k = 2)
   # save files for large sample size ranges
   save_file(sim_data_u1_large, path = "data/", 
@@ -143,11 +146,11 @@ if (overwrite_data | !("sim_data_u2_large.RData" %in% list.files("data"))) {
   
   set.seed(20210922)
   # simulate data for u2 and large sample size ranges 
-  sim_data_u2_large <- simulate_data(u12 = log(2.476632),  
+  sim_data_u2_large <- simulate_data(u12 = medium_u12, 
                                      s_range = c(100, 3000),
                                      step_size = 100,
-                                     u_per_n  = 50, 
-                                     samples_per_u = 50, 
+                                     u_per_n  = u_per_n_input,
+                                     samples_per_u = samples_per_u_input, 
                                      k = 2)
   
   # save files for large sample size ranges
@@ -160,11 +163,11 @@ if (overwrite_data | !("sim_data_u2_large.RData" %in% list.files("data"))) {
 if (overwrite_data | !("sim_data_u3_large.RData" %in% list.files("data"))) {
   set.seed(20230922)
   # simulate data for u3 and large sample size ranges 
-  sim_data_u3_large <- simulate_data(u12 = large_u12,  
+  sim_data_u3_large <- simulate_data(u12 = large_u12, 
                                      s_range = c(100, 3000),
                                      step_size = 100,
-                                     u_per_n  = 50, 
-                                     samples_per_u = 50, 
+                                     u_per_n  = u_per_n_input,
+                                     samples_per_u = samples_per_u_input, 
                                      k = 2)
   
   # save files for large sample size ranges
