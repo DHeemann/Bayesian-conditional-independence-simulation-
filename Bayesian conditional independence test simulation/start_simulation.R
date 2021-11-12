@@ -39,6 +39,10 @@ sapply(list.files("setup functions"), function(x) {
 # If over_write_data = FALSE, new data will be only simulated if not present in 
 # in the data folder
 overwrite_data <- TRUE
+       
+# determines how many samples will be simulated
+u_per_n_input <- 25
+samples_per_u_input <- 25
 
 source("create_data_loglinear.R")
 
