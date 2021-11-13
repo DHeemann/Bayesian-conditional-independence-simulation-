@@ -48,7 +48,7 @@ if (!"samples_per_u_input" %in% ls()) {
             samples_per_u_input <- 25
             }
     
-samples_per_u_input <- 25
+
 
 source("create_data_loglinear.R")
 
