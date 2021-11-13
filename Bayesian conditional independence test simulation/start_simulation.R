@@ -41,10 +41,10 @@ sapply(list.files("setup functions"), function(x) {
 overwrite_data <- TRUE
        
 # determines how many samples will be simulated
-if (!"u_per_n_input" %in% ls() {
+if (!"u_per_n_input" %in% ls()) {
             u_per_n_input <- 25
             }
-if (!"samples_per_u_input" %in% ls() {
+if (!"samples_per_u_input" %in% ls()) {
             samples_per_u_input <- 25
             }
     
