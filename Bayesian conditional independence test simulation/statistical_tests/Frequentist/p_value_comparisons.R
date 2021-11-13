@@ -132,7 +132,7 @@ p_cmh_hist <- cmh_ll_u0 %>%
         axis.title = element_text(size = 12), 
         axis.text = element_text(size = 10))
 
-ggsave("Results/frequentist/plots/histogram_u0_CMH_loglinear.pdf", 
+ggsave("results/frequentist/plots/histogram_u0_CMH_loglinear.pdf", 
        plot = p_cmh_hist)
 
 
@@ -172,8 +172,20 @@ p_values_nlarge_median <- p_values_nlarge %>%
   group_by(n, method, u12) %>%
   summarise(median_pval = median(p_val, na.rm = TRUE))
 
+p_values_nlarge_median_plot <- p_values_nlarge_median %>%
+  ggplot(aes(x = n, y = median_pval)) + 
+  geom_point(aes(col = u12)) +
+  geom_line(aes(group = u12, col = u12)) + 
+  facet_wrap(. ~ method, nrow = 4) + 
+  ggpubr::theme_pubr() + 
+  theme(legend.position = "right") + 
+  scale_x_continuous(limits = c(100, 1500), 
+                     breaks = seq(100, 1500, 200)) +
+  ylab("Median p-value") + xlab("Sample size") +
+  scale_color_discrete(name = unname(TeX("u_{12}")))
 
-ggsave("Results/frequentist/plots/p_values_nlarge_median_plot.pdf", 
+
+ggsave("results/frequentist/plots/p_values_nlarge_median_plot.pdf", 
        plot = p_values_nlarge_median_plot)
 
 
@@ -224,7 +236,7 @@ p_values_nsmall_median_plot <- p_values_nsmall %>%
   ylab("Median p-value") + xlab("Sample size") +
   scale_color_discrete(name = unname(TeX("u_{12}")))
 
-ggsave("Results/frequentist/plots/p_values_nsmall_median_plot.pdf", 
+ggsave("results/frequentist/plots/p_values_nsmall_median_plot.pdf", 
        plot = p_values_nsmall_median_plot)
 
 
