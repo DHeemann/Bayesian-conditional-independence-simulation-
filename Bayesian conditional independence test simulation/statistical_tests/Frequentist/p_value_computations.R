@@ -29,8 +29,8 @@ column_names_small <-  colMeans(structure(vapply(sim_data_u0_small, function(x) 
 
 sim_data_u0_large <- readRDS("data/sim_data_u0_large.RData")
 sim_data_u1_large <- readRDS("data/sim_data_u1_large.RData")
-sim_data_u2_large <- readRDS("data/sim_data_u0_large.RData")
-sim_data_u3_large <- readRDS("data/sim_data_u1_large.RData")
+sim_data_u2_large <- readRDS("data/sim_data_u2_large.RData")
+sim_data_u3_large <- readRDS("data/sim_data_u3_large.RData")
   
 
 
