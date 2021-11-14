@@ -54,7 +54,7 @@ if (overwrite_data | !("sim_data_u0_small.RData" %in% list.files("data"))) {
   # simulate data for u0 and small sample size ranges 
   sim_data_u0_small <- simulate_data(u12 = 0,  
                                      s_range = c(20, 100),
-                                     step_size = 20,
+                                     step_size = 10,
                                      u_per_n  = u_per_n_input,
                                      samples_per_u = samples_per_u_input, 
                                      k = 2)
@@ -70,7 +70,7 @@ if (overwrite_data | !("sim_data_u1_small.RData" %in% list.files("data"))) {
   # simulate data for u1 and small sample size ranges 
   sim_data_u1_small <- simulate_data(u12 = small_u12, 
                                      s_range = c(20, 100),
-                                     step_size = 20,
+                                     step_size = 10,
                                      u_per_n  = u_per_n_input,
                                      samples_per_u = samples_per_u_input, 
                                      k = 2)
@@ -87,7 +87,7 @@ if (overwrite_data | !("sim_data_u2_small.RData" %in% list.files("data"))) {
   # simulate data for u2 and small sample size ranges 
   sim_data_u2_small <- simulate_data(u12 = medium_u12, 
                                      s_range = c(20, 100),
-                                     step_size = 20,
+                                     step_size = 10,
                                      u_per_n  = u_per_n_input,
                                      samples_per_u = samples_per_u_input, 
                                      k = 2)
@@ -102,7 +102,7 @@ if (overwrite_data | !("sim_data_u2_small.RData" %in% list.files("data"))) {
   # simulate data for u3 and small sample size ranges 
   sim_data_u3_small <- simulate_data(u12 = large_u12, 
                                      s_range = c(20, 100),
-                                     step_size = 20,
+                                     step_size = 10,
                                      u_per_n  = u_per_n_input,
                                      samples_per_u = samples_per_u_input, 
                                      k = 2)
