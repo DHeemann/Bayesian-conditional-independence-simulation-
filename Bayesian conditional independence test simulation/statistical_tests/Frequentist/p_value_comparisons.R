@@ -49,10 +49,10 @@ p_values_large <- list(u0 = p_values_u0_large,
 
 #### 2. Comparison of log-linear and logistic approach ####
 
-glm_diff_u0 <- abs(p_values_u0_small$log_linear - p_values_u0_small$logistic)
-glm_diff_u1 <- abs(p_values_u1_small$log_linear - p_values_u1_small$logistic)
-glm_diff_u2 <- abs(p_values_u2_small$log_linear - p_values_u2_small$logistic)
-glm_diff_u3 <- abs(p_values_u3_small$log_linear - p_values_u3_small$logistic)
+#glm_diff_u0 <- abs(p_values_u0_small$log_linear - p_values_u0_small$logistic)
+#glm_diff_u1 <- abs(p_values_u1_small$log_linear - p_values_u1_small$logistic)
+#glm_diff_u2 <- abs(p_values_u2_small$log_linear - p_values_u2_small$logistic)
+#glm_diff_u3 <- abs(p_values_u3_small$log_linear - p_values_u3_small$logistic)
 
 # overall mean difference in p-values
 # mean(glm_diff_u0, na.rm = TRUE)
