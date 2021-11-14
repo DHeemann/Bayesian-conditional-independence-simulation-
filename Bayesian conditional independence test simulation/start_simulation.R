@@ -42,10 +42,10 @@ overwrite_data <- TRUE
        
 # determines how many samples will be simulated
 if (!"u_per_n_input" %in% ls()) {
-            u_per_n_input <- 25
+            u_per_n_input <- 100
             }
 if (!"samples_per_u_input" %in% ls()) {
-            samples_per_u_input <- 25
+            samples_per_u_input <- 100
             }
     
 
