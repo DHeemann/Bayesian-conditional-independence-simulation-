@@ -31,8 +31,7 @@ save_file <- function(data, overwrite=FALSE, path) {
   }
 }
 
-
-# function to save files locally 
+# if data should be overwritten or not 
 if (!"overwrite_data" %in% ls()) {
   overwrite_data <- FALSE
 }
