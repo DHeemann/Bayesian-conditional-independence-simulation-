@@ -1,3 +1,6 @@
+# ggplot theme for the classification of Bayes factors 
+
+# create segments 
 bf_segments <- data.frame(xmin = -Inf,
                           xmax = Inf,
                           ymin = c(1/rev(c(3, 10, 30, 100)),
