@@ -109,18 +109,19 @@ glm_diff_df %>%
 #### 3. Comparison of log-linear and CMH test (corrected) ####
 
 # check for uniform distribution for p-values for  data generated from the Null
-cmh_ll_u0 <- as.data.frame(p_values_u0_small$log_linear) %>% 
+cmh_ll_u0 <- as.data.frame(p_values_u0_large$log_linear) %>% 
   pivot_longer(starts_with("V")) %>%
   group_by(n = extract_numeric(name)*10) %>% 
   rename(p_value = value) %>%
   mutate(test = "Log-linear test") %>%
-  bind_rows(as.data.frame(p_values_u0_small$CMH_no_correct) %>% 
+  bind_rows(as.data.frame(p_values_u0_large$CMH_no_correct) %>% 
               pivot_longer(starts_with("V")) %>%
               group_by(n = extract_numeric(name)*10) %>% 
               rename(p_value = value) %>%
               mutate(test = "CMH test (without correction)")) %>%
   select( -name)
 
+# creating figure
 p_cmh_hist <- cmh_ll_u0 %>% 
   ggplot(aes(x =p_value))+
   geom_histogram(col = "black", alpha = 0.8) + 
@@ -156,7 +157,7 @@ p_values_nlarge <- lapply(1:length(p_values_large), function(u) {
    p_u_df %>% mutate(u12 = u_par)
 }) %>% do.call(what = rbind)
 
-
+# p-value summary for large n
 p_values_nlarge_median <- p_values_nlarge %>% 
   filter(method %in% c("CMH", "log_linear")) %>%
   mutate(method = case_when(method == "CMH_no_correct" ~
@@ -172,6 +173,7 @@ p_values_nlarge_median <- p_values_nlarge %>%
   group_by(n, method, u12) %>%
   summarise(median_pval = median(p_val, na.rm = TRUE))
 
+# create figure
 p_values_nlarge_median_plot <- p_values_nlarge_median %>%
   ggplot(aes(x = n, y = median_pval)) + 
   geom_point(aes(col = u12)) +
