@@ -106,36 +106,20 @@ get_mod_hgn_bf <- function(sim_data, n_flex = FALSE,k_param) {
   # 
   # Returns: Bayes factors in the same dimensions structure as the sim_data object
   # 
-  bf <- structure(pbsapply(sim_data, function(x) tryCatch({
+  bf <- structure(pbsapply(sim_data, function(x) #tryCatch({
     if (n_flex) {
-      manual_hyper_gn(sim_data = x, 
-                      k1 = 1/sum(x$arr),
-                      n_flexible = n_flex)
+      manual_hyper_gn(sim_data = x$df, 
+                      k1 = 1/sum(x$arr))
     
     } else {
-      manual_hyper_gn(sim_data = x, 
-                      k1 = k_param,
-                      n_flexible = n_flex)
+      manual_hyper_gn(sim_data = x$df, 
+                      k1 = k_param)
     }
-  }, error = function(cond) { return(NA)
-  })), dim = dim(sim_data))
-  
-  return(list(bf = bf))
-}
-
-# function to compute own bayes factor across many data setss
-get_mod_hgn_bf_logistic <- function(sim_data) {
-  # apply modified Hyper G/N Bayes factor to multiple datasets
-  # 
-  # Args:
-  #     sim_datadata: multiple data.frames containing frequency values 
-  # 
-  # Returns: Bayes factors in the same dimensions structure as the sim_data object
-  # 
-  bf <- structure(pbsapply(sim_data, function(x) tryCatch({ 
-    hyper_gn_logistic(sim_data = x)
-  }, error = function(cond) { return(NA)
-  })), dim = dim(sim_data))
+ # }, 
+#error = function(cond) { return(NA)
+#  }
+#)
+), dim = dim(sim_data))
   
   return(list(bf = bf))
 }
