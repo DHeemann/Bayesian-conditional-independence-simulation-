@@ -96,8 +96,11 @@ get_bayes_factors <- function(sim_data, prior = EB.local(), M = "poisson") {
 #get_bayes_factors(sim_data = sim_data_u0_large[1], prior = "Unit Information")
 #get_bayes_factors(sim_data = sim_data_u0_large[1], prior = g.prior(100))
 
+                           
+                           
 # function to compute modified hyper g bayes factor across many data sets
 # based on Poisson regression models
+# Requires the function hyper_gn_bf.R 
 get_mod_hgn_bf <- function(sim_data, n_flex = FALSE,k_param) {
   # apply modified Hyper G/N Bayes factor to multiple datasets
   # 
