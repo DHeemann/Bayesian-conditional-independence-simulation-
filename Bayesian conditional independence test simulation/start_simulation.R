@@ -63,6 +63,7 @@ source("statistical_tests/Frequentist/p_value_computations.R")
 source("statistical_tests/Bayesian/priors/compute_bayes_factors.R")
 
 #### 5. Create figures ##### 
+# requires that the scripts to compute p-values and Bayes factors in step 4 is executed beforehand
 
 # for p_values 
 source("statistical_tests/Frequentist/p_value_comparisons.R")
